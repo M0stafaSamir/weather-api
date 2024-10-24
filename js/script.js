@@ -13,11 +13,6 @@ const errorCallback = (error) => {
   console.log(error);
 };
 
-const watchId = navigator.geolocation.getCurrentPosition(
-  successCallback,
-  errorCallback
-);
-
 search.addEventListener("input", function () {
   city = search.value;
   getWeather(city);
@@ -36,7 +31,7 @@ async function getWeather(city) {
   console.log(weatherList);
   display();
 }
-// getWeather("cairo");
+getWeather("cairo");
 
 function display() {
   document.getElementById(
