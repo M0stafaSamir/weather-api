@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- start of Navbar-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container py-4">
+        <a class="navbar-brand" href="#">
+          <img class="me-2" src="imgs/logo.png" alt="Logo" width="64" />
+          <span class="align-bottom text-white">weather</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-2">
+              <a
+                class="nav-link px-4 py-0 fw-medium active"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link px-4 py-0 fw-medium" href="#">News</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link px-4 py-0 fw-medium" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link px-4 py-0 fw-medium" href="#">Photos</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link px-4 py-0 fw-medium" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end of Navbar-->
+
+    <!-- start of main-->
+    <main id="home" class="position-relative">
+      <div class="banner py-5">
+        <div class="container py-5">
+          <div class="mb-3 position-relative">
+            <i class="fa-solid fa-magnifying-glass position-absolute"></i>
+            <input
+              type="text"
+              class="form-control rounded-pill px-5"
+              id="searchInput"
+              placeholder="Find your location..." />
+            <button
+              class="findBtn btn position-absolute rounded-pill py-2 px-5 text-white">
+              Find
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="tableOfTemp text-white w-100">
+        <div class="container">
+          <div class="row gx-0 gy-2">
+            <div class="col-md-4">
+              <div class="item">
+                <div class="date px-2 py-2 d-flex justify-content-between">
+                  <span id="today">sunday</span>
+                  <span id="todayDate">19 june</span>
+                </div>
+                <div class="temprature px-3 py-4">
+                  <p id="city" class="city"></p>
+                  <h1 id="todayTemp" class="text-center"></h1>
+                  <div id="conditionImg" class="text-center"></div>
+                  <div class="weather-data">
+                    <p id="condition"></p>
+                    <div class="d-flex justify-content-between">
+                      <p id="humidity"></p>
+                      <p id="windSpeed"></p>
+                      <p id="windDir"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="item-middle text-center">
+                <div id="tomorrow" class="date-middle px-2 py-2 text-center">
+                  sunday
+                </div>
+                <div
+                  class="tempContainer d-flex justify-content-center align-items-center">
+                  <div class="temprature-middle px-3 py-4">
+                    <div id="conditionImgNextDay" class="text-center"></div>
+                    <h2 id="maxTempNextDay" class="text-center m-0"></h2>
+                    <h5
+                      id="minTempNextDay"
+                      class="text-center text-white-50"></h5>
+                    <p id="condtionNextDay"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="item text-center h-100">
+                <div id="dayAfterTomorrow" class="date px-2 py-2">sunday</div>
+                <div
+                  class="tempContainer d-flex justify-content-center align-items-center">
+                  <div class="temprature px-3 py-4">
+                    <div
+                      id="conditionImgDayAfterTomorrow"
+                      class="text-center"></div>
+                    <h2
+                      id="maxTempDayAfterTomorrow"
+                      class="text-center m-0"></h2>
+                    <h5
+                      id="minTempDayAfterTomorrow"
+                      class="text-center text-white-50"></h5>
+                    <p id="conditionDayAfterTomorow"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end of main-->
+
+    <!-- start of Footer-->
+    <footer class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="mb-3 position-relative">
+              <input
+                type="email"
+                class="form-control rounded-pill"
+                id="emailInput"
+                placeholder="Enter your email to subscribe..." />
+              <button
+                class="findBtn btn position-absolute rounded-pill py-2 px-4 text-white">
+                Subscribe
+              </button>
+            </div>
+            <p class="text-white-50 mt-4">
+              Copyright&reg; 2014 Company name. Designed by Themezy. All rights
+              reserved
+            </p>
+          </div>
+          <div class="col-md-4">
+            <div class="icons text-center">
+              <i class="fa-brands fa-facebook-f fs-5"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-google-plus-g"></i>
+              <i class="fa-brands fa-pinterest"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end of Footer-->
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
