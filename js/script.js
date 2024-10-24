@@ -4,15 +4,6 @@ var weatherList;
 var showBtn = document.getElementById("ShowAllWeek");
 var rowData = document.getElementById("rowData");
 
-const successCallback = (position) => {
-  var lociation = `${position.coords.latitude},${position.coords.longitude}`;
-  getWeather(lociation);
-};
-const errorCallback = (error) => {
-  ``;
-  console.log(error);
-};
-
 search.addEventListener("input", function () {
   city = search.value;
   getWeather(city);
