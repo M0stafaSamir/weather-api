@@ -1,13 +1,11 @@
 var search = document.getElementById("searchInput");
 var city;
 var weatherList;
-var showBtn = document.getElementById("ShowAllWeek");
 var rowData = document.getElementById("rowData");
 
 search.addEventListener("input", function () {
   city = search.value;
   getWeather(city);
-  showBtn.innerHTML = `<a><i class="fa-solid fa-plus"></i> show whole week</a>`;
   rowData.classList.remove("h-full");
   rowData.classList.add("h-0");
 });
