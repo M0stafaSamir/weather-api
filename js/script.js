@@ -1,13 +1,11 @@
 var search = document.getElementById("searchInput");
 var city;
 var weatherList;
-var rowData = document.getElementById("rowData");
 
 search.addEventListener("input", function () {
   city = search.value;
   getWeather(city);
-  rowData.classList.remove("h-full");
-  rowData.classList.add("h-0");
+
 });
 
 async function getWeather(city) {
