@@ -1,20 +1,15 @@
-var search = document.getElementById("searchInput");
-var city;
-var weatherList;
-var showBtn = document.getElementById("ShowAllWeek");
-var rowData = document.getElementById("rowData");
+const search = document.getElementById("searchInput");
+let city;
+let weatherList;
 
 search.addEventListener("input", function () {
   city = search.value;
   getWeather(city);
-  showBtn.innerHTML = `<a><i class="fa-solid fa-plus"></i> show whole week</a>`;
-  rowData.classList.remove("h-full");
-  rowData.classList.add("h-0");
 });
 
 async function getWeather(city) {
   var response = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=7411098327b74a02af3103454241706&q=07112&days=7`
+    `https://api.weatherapi.com/v1/forecast.json?key=7411098327b74a02af3103454241706&q=${city}&days=7`
   );
   var finalData = await response.json();
 
